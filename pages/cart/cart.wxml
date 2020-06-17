@@ -1,8 +1,79 @@
 <!--pages/cart/cart.wxml-->
-
+<!-- 地址 -->
 <view class="getAddress">
-  <button type="primary" plain bind:tap="getAddress">
+  <button type="primary" plain bind:tap="getAddress" 
+  wx:if="{{!address.userName}}">
       获得收货地址
   </button>
+  <view class="addressInfo"
+  wx:else>
+    <view class="userData">
+      <view class="name">
+      {{address.userName}}
+
+      </view>
+
+      <view class="datail">
+        {{address.all}}
+      </view>
+    </view>
+    <view class="phone">
+      {{address.telNumber}}
+    </view>
+
+  
+  </view>
+</view>
+
+
+<view class="cart-content">
+  <view class="title">
+    购物车
+  </view>
+  <view class="goods-list">
+    <view class="list-item">
+      <view class="check_warp">
+        <checkbox  />
+      </view>
+      <view class="goods-img">
+        <image mode="widthFix" src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_1_800x800.jpg"  />
+      </view>
+      <view class="desc">
+        <view class="goods-name text_row_2">
+        我是商品名字
+        我是商品名字
+        我是商品名字
+        我是商品名字
+        我是商品名字
+        </view>
+      
+        <view class="handle-warp">
+          <view class="price">
+            ￥9999
+          </view>
+
+          <view class="count">
+            <view class="exit">
+            +
+            </view>
+            <view class="count-num">
+            10
+            </view>
+            <view class="exit">
+            -
+            </view>
+          </view>
+        
+        
+        </view>
+
+      
+      </view>
+
+    
+    </view>
+  </view>
+
+
 
 </view>

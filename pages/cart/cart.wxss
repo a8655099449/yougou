@@ -4,3 +4,71 @@
 .getAddress button {
   width: 70%;
 }
+.getAddress .addressInfo {
+  display: flex;
+  text-align: 48rpx;
+}
+.getAddress .addressInfo .userData {
+  flex: 5;
+}
+.getAddress .addressInfo .phone {
+  flex: 3;
+  text-align: right;
+}
+.cart-content .title {
+  color: var(--main-color);
+  font-size: 48rpx;
+  line-height: 80rpx;
+  font-weight: 700;
+  border-bottom: 1rpx solid var(--main-color);
+  border-top: 1rpx solid var(--main-color);
+}
+.cart-content .list-item {
+  padding: 20rpx 0;
+  display: flex;
+  border-bottom: 3rpx solid #dedede;
+}
+.cart-content .list-item .check_warp {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-content .list-item .goods-img {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-content .list-item .goods-img image {
+  width: 80%;
+}
+.cart-content .list-item .desc {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+}
+.cart-content .list-item .desc .handle-warp {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.cart-content .list-item .desc .handle-warp .price {
+  font-weight: 600;
+  font-size: 42rpx;
+  color: var(--main-color);
+}
+.cart-content .list-item .desc .handle-warp .count {
+  display: flex;
+}
+.cart-content .list-item .desc .handle-warp .count .exit,
+.cart-content .list-item .desc .handle-warp .count .count-num {
+  width: 55rpx;
+  height: 55rpx;
+  border: 1rpx solid #ccc;
+  text-align: center;
+  line-height: 55rpx;
+}
+.cart-content .list-item .desc .handle-warp .count .count-num {
+  border: none;
+}

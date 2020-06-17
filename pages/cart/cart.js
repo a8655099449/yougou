@@ -2,9 +2,19 @@ import { regeneratorRuntime } from '../../utils/runtime.js'
 import { getSetting, chooseAddress, openSetting } from '../../utils/asyncWX.js'
 
 Page({
-	data: {},
+	data: {
+    address:{}
 
-	onLoad: function (options) {},
+  },
+
+  onShow(){
+    const address = wx.getStorageSync('address');
+    address.all = address.provinceName+address.cityName+address.countyName+address.detailInfo
+    this.setData({
+      address
+    })
+    
+  },
 	async getAddress() {
     // 优化的版本
 		try {
@@ -25,29 +35,5 @@ Page({
       });
 		}
 
-		/* wx.getSetting({
-			success: (result) => {
-				const scope = result.authSetting['scope.address']
-
-				if (scope || scope == undefined) {
-					wx.chooseAddress({
-						success: (result) => {
-							console.log(result)
-						},
-					})
-				} else {
-					wx.openSetting({
-						success: (result) => {
-
-							wx.chooseAddress({
-								success: (result) => {
-									console.log(result)
-								},
-							})
-						},
-					})
-				}
-			},
-    }) */
 	},
 })

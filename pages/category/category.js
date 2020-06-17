@@ -49,25 +49,6 @@ Page({
 			rightContent,
 		})
 
-		// getCategory().then((res) => {
-		// 	this.cate = res.data.message
-
-		// 	wx.setStorage({
-		// 		key: 'cates',
-		// 		data: {
-		// 			time: Date.now(),
-		// 			data: this.cate,
-		// 		},
-		// 	})
-
-		// 	let leftCate = this.cate.map((item) => item.cat_name)
-		// 	let rightContent = this.cate[0].children
-
-		// 	this.setData({
-		// 		leftCate,
-		// 		rightContent,
-		// 	})
-		// })
 	},
 	switchTab(e) {
 		const index = e.currentTarget.dataset.index
