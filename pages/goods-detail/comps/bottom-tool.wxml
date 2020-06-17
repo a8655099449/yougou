@@ -1,0 +1,40 @@
+<!--pages/goods-detail/comps/bottom-tool.wxml-->
+<view class="tool">
+  <view class="item">
+    <view class="iconfont icon-dianhua1">
+    </view>
+    <view class="text">
+      客服
+    </view>
+    <button open-type="contact"></button>
+  </view>
+   <view class="item">
+    <view class="iconfont icon-fenxiang">
+    </view>
+    <view >
+      分享
+    </view>
+    <button open-type="share" ></button>
+  </view>
+
+
+    
+   <navigator class="item" url="/pages/cart/cart" open-type="switchTab">
+     <view class="iconfont icon-gouwuche">
+    </view>
+    <view class="text">
+      购物车
+    </view>
+
+   </navigator>
+
+
+
+  <view class="cart" bind:tap="addCart">
+      加入购物车
+  </view>
+  <view class="buy">
+      立即购买
+  </view>
+
+</view>

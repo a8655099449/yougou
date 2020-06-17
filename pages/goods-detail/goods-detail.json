@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "yg-swiper":"/components/yg-swiper/yg-swiper",
+
+    "bottom-tool":"./comps/bottom-tool"
+
+  },
+  "navigationBarTitleText":"商品详情"
+}

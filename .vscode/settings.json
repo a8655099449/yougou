@@ -1,0 +1,6 @@
+{
+  "less.compile": {
+    "outExt": ".wxss"
+
+  }
+}

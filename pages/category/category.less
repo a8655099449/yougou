@@ -1,0 +1,56 @@
+/* pages/category/category.wxss */
+
+page{
+  height: 100%;
+}
+.main{
+  height: ~'calc(100vh - 100rpx)';
+  display: flex;
+  .left{
+    flex:2;
+    height: 100%;
+    .left-item{
+      font-size: 30rpx;
+      height: 80rpx;
+      line-height: 80rpx;
+      text-align: center;
+      border-left: 3px solid  transparent;
+    
+    }
+    .active{
+      color: var(--main-color);
+      border-color: var(--main-color);
+    }
+  }
+  .right{
+    flex:5;
+    height: 100%;
+    .title{
+      line-height: 80rpx;
+      height: 80rpx;
+      text-align: center;
+      font-size: 40rpx;
+      font-weight: 600;
+      color: #df626a;
+    }
+
+
+    .item-list{
+      display: flex;
+      text-align: center;
+      flex-wrap: wrap;
+     
+      .list-child{
+        width: 33.33%;
+
+        image{
+          width: 50%;
+        }
+
+      }
+
+    }
+
+  }
+
+}

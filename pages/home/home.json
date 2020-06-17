@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "yg-search":"/components/yg-search/yg-search",
+    "yg-swiper":"/components/yg-swiper/yg-swiper",
+    "cate-list":"./comps/cate-list/cate-list",
+    "floor-list":"./comps/floor-list/floor-list"
+  },
+  "navigationBarTitleText":"优购首页"
+}

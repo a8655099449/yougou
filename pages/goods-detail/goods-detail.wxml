@@ -1,0 +1,41 @@
+<!--pages/goods-detail/goods-detail.wxml-->
+<yg-swiper list="{{info.pics}}" imageName="pics_mid" swiper-style="swiper-style" 
+bind:itemClick="swiperClick"
+/>
+<view class="goods-Info">
+  <view class="price">
+    ￥ {{info.goods_price}}
+  </view>
+  <view class="desc">
+    <view class="goods-name ">
+      <view class="text_row_2">
+          {{info.goods_name}}
+      </view>
+     
+    </view>
+    <view class="collect">
+      <view class="iconfont icon-shoucang2">
+
+      </view>
+
+      <view class="text">
+        收藏
+      </view>
+    </view>
+  </view>
+
+  <!-- 图文详情 -->
+  <view class="detail-title">
+
+    图文详情
+
+  </view>
+
+  <rich-text  nodes="{{info.goods_introduce}}">
+    
+  </rich-text>
+</view>
+
+
+<bottom-tool bind:addCart="addCart" />
+

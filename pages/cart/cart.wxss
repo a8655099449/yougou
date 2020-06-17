@@ -1,0 +1,6 @@
+.getAddress {
+  padding: 20rpx;
+}
+.getAddress button {
+  width: 70%;
+}

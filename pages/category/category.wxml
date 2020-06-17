@@ -1,0 +1,67 @@
+<!--pages/category/category.wxml-->
+<yg-search />
+
+<view class="main">
+  <scroll-view 
+  class="left" 
+  scroll-y 
+ >
+    <block 
+    
+    wx:for="{{leftCate}}"
+    wx:key="index"
+    
+    >
+      <view class="left-item {{ activeIndex == index ? 'active': '' }} "
+      bind:tap="switchTab"
+      data-index="{{index}}"
+      >
+
+        {{item}}
+
+      </view>
+
+    </block>
+  </scroll-view >
+  <scroll-view  
+  class="right" 
+  scroll-y  
+  scroll-top = "{{leftScroll}}"
+  bindscrolltolower="scrollBottom"
+  
+  >
+    <block 
+    wx:for="{{rightContent}}"
+    wx:key="index1"
+    wx:for-item="item1"
+    wx:for-index="index1"
+    >
+      <view class="right-item">
+        <view class="title ">
+         / {{item1.cat_name}} /
+        </view>
+
+        <view class="item-list">
+          <block 
+          wx:for="{{item1.children}}"
+          wx:for-item="item2"
+          wx:key="index"
+          >
+            <view class="list-child">
+              <navigator url="/pages/goods-list/goods-list?cid={{item2.cat_id}}" >
+                <image src="{{item2.cat_icon}}" mode="widthFix"/>
+                <view class="cat_name">
+                    {{item2.cat_name}}
+                </view>
+              </navigator>
+
+            </view>
+          </block>
+        </view>
+
+        
+      </view>    
+    </block>
+  </scroll-view >
+
+</view>

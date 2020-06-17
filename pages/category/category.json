@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "yg-search":"/components/yg-search/yg-search"
+   
+  },
+  "navigationBarTitleText":"商品分类"
+}

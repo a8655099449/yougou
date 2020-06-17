@@ -1,0 +1,7 @@
+<!--components/yg-serach/yg-serach.wxml-->
+<view class="search">
+  <navigator class="search-nav" url="/pages/search/search" open-type="navigate">
+    搜索
+  </navigator>
+
+</view>

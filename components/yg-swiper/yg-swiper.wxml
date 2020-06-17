@@ -1,0 +1,19 @@
+<!--components/my-swiper/my-swiper.wxml-->
+
+<swiper 
+    circular 
+    autoplay 
+    indicator-dots
+    indicator-active-color="#ea444e"
+    indicator-color="rgba(0,0,0,.1)"
+    class="~swiper-style"
+> 
+ <block wx:for="{{list}}" wx:key="index" >
+  <swiper-item class = "swiper-item" 
+  bind:tap="itemClick"
+  data-index="{{index}}"
+  >
+    <image src="{{item[imageName]}}" mode="widthFix" class="swiper-img" />
+  </swiper-item>
+ </block>
+</swiper>

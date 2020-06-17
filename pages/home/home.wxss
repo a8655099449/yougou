@@ -1,0 +1,6 @@
+/* pages/home/home.wxss */
+
+.swiper-style{
+  width: 750rpx;
+  height: 340rpx;
+}

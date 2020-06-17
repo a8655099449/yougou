@@ -1,0 +1,23 @@
+.list-item {
+  display: flex;
+  width: 100%;
+  padding: 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+.list-item .item-img {
+  flex: 2;
+  margin-right: 20rpx;
+  text-align: center;
+}
+.list-item .item-img image {
+  width: 280rpx;
+}
+.list-item .desc {
+  flex: 3;
+}
+.list-item .desc .price {
+  font-size: 40prx;
+  font-weight: 600;
+  color: var(--main-color);
+  line-height: 60rpx;
+}

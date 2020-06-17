@@ -1,0 +1,8 @@
+page{
+  --main-color:#ea444e
+}
+image{
+  width: 100%;
+}
+@import '/assets/css/main.wxss';
+@import '/assets/css/iconfont.wxss';

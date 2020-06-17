@@ -1,0 +1,11 @@
+/* components/my-swiper/my-swiper.wxss */
+
+/* .swiper{
+  width: 750rpx;
+  height: 340rpx;
+} */
+
+.swiper-img{
+  width: 100%;
+  height: 100%;
+}

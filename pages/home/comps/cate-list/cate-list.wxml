@@ -1,0 +1,7 @@
+<view class="cate-list">
+  <block wx:for="{{list}}" wx:key="index">
+    <view class="item">
+      <image src="{{item.image_src}}" mode="widthFix" />
+    </view>
+  </block>
+</view>

@@ -1,0 +1,17 @@
+/* components/yg-serach/yg-serach.wxss */
+
+.search{
+  height: 80rpx;
+  padding: 10rpx;
+  background-color: var(--main-color);
+}
+.search-nav{
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10rpx;
+  caret-color: #666;
+  align-items: center;
+}

@@ -1,0 +1,9 @@
+{
+	"usingComponents": {
+		"yg-search": "/components/yg-search/yg-search",
+		"yg-tab-control": "/components/yg-tab-control/yg-tab-control"
+	},
+  "navigationBarTitleText": "商品列表",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

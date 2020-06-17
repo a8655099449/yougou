@@ -1,0 +1,11 @@
+/* pages/home/comps/cate-list/cate-list.wxss */
+.cate-list {
+  display: flex;
+}
+.cate-list .item {
+  flex: 1;
+  padding: 20rpx;
+}
+.cate-list .item image {
+  width: 100%;
+}

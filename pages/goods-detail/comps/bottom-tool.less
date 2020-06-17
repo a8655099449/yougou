@@ -1,0 +1,44 @@
+/* pages/goods-detail/comps/bottom-tool.wxss */
+.tool{
+  height: 90rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  font-size: 24rpx;
+  text-align: center;
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, .05);
+  .item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    color: #666;
+    position: relative;
+    button{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+  }
+  .cart , .buy{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    background-color: #ea444e;
+    color: white;
+    justify-content: center;
+    // text-align: center;
+    
+  }
+  .cart{
+    background-color: #fea400;
+  }
+
+}

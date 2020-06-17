@@ -1,0 +1,35 @@
+<!-- pages/home/comps/floor-list/floor-list.wxml -->
+<view class="floor">
+  <block 
+  wx:for="{{list}}" 
+  wx:for-item="item1" 
+  wx:for-index="index1"
+  wx:key="index1">
+
+    <view class="item">
+      <view class="title">
+        <image src="{{item1.floor_title.image_src}}" ></image>
+      </view>
+      <view class="item-img">
+      
+        <block 
+          wx:for="{{item1.product_list}}"
+          wx:for-item="item2"
+          wx:for-index="index2"
+          wx:key="index2"
+          >
+
+          <view class="item-list" >
+              <image src="{{item2.image_src}}" >
+                
+              </image>
+          </view>
+
+        </block>
+      
+      
+      </view>
+    </view>
+
+  </block>
+</view>

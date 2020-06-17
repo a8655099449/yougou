@@ -1,0 +1,22 @@
+/* components/m-tab-control/m-tab-control.wxss */
+.tab-view {
+	height: 80rpx;
+	display: flex;
+	background: #fff;
+	position: sticky;
+	top: 0;
+	padding-top: 10rpx;
+}
+.tab-item {
+	flex: 1;
+	text-align: center;
+}
+
+.active {
+	color: var(--main-color);
+	/*增加下划线*/
+}
+.active .item-text {
+	padding: 12rpx 18rpx;
+	border-bottom: 6rpx solid var(--main-color);
+}

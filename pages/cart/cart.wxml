@@ -1,0 +1,8 @@
+<!--pages/cart/cart.wxml-->
+
+<view class="getAddress">
+  <button type="primary" plain bind:tap="getAddress">
+      获得收货地址
+  </button>
+
+</view>
