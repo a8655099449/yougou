@@ -19,3 +19,12 @@ export function getGoodsDetail(goods_id) {
     }
 	})
 }
+
+
+// 获取商品详情
+// http://121.37.195.155/test/public/
+export function networkTest(goods_id) {
+	return request({
+		url: 'http://121.37.195.155/test/public/'
+	},true)
+}

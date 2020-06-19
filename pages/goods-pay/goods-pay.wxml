@@ -1,12 +1,7 @@
-<!--pages/cart/cart.wxml-->
-<!-- 地址 -->
+
 <view class="getAddress">
-  <button type="primary" plain bind:tap="getAddress" 
-  wx:if="{{!address.userName}}">
-      获得收货地址
-  </button>
-  <view class="addressInfo"
-  wx:else>
+
+  <view class="addressInfo">
     <view class="userData">
       <view class="name">
       {{address.userName}}
@@ -33,18 +28,12 @@
   <view class="goods-list">
     <block wx:for="{{cart}}"
       wx:key="goods_id"
-    
     >
 
       <view class="list-item">
-        <view class="check_warp">
-          <checkbox-group bindchange="handleCheck"  data-index = "{{index}}">
-               <checkbox  checked="{{item.checked}}"  />
-          </checkbox-group>
-       
-        </view>
+     
         <view class="goods-img">
-          <image mode="widthFix" src="{{item.goods_big_logo? item.goods_big_logo :'/assets/img/noImg.png'}}"  />
+          <image mode="widthFix" src="{{item.goods_big_logo ? item.goods_big_logo :'/assets/img/noImg.png' }}"  />
         </view>
         <view class="desc">
           <view class="goods-name text_row_2">
@@ -57,28 +46,16 @@
             </view>
 
             <view class="count">
-              <view class="exit" hover-class="handle-active" bind:tap="editCount" data-index = "{{index}}" data-count="{{1}}">
-              +
-              </view>
+            
               <view class="count-num">
-              {{item.count}}
+              x {{item.count}}
               </view>
-              <view class="exit" hover-class="handle-active" 
-
-              bind:tap="editCount" data-index = "{{index}}" data-count="{{-1}}">
-              -
-              </view>
+            
             </view>
           </view>
         </view>
-
-      
       </view >
     </block>
-
-
- 
-
   </view>
 
 
@@ -86,11 +63,7 @@
 </view>
 
 <view class="footer-tool">
-  <view class="check-warp">
-   <checkbox-group bindchange="allCheck" >
-     <checkbox checked="{{allChecked}}"> 全选</checkbox  >
-   </checkbox-group>
-  </view>
+ 
   <view class="price-warp">
     <view class="price">
       合计 <text class="price-num" >￥{{allPrice}}</text>
@@ -99,8 +72,8 @@
       包含运费
     </view>
   </view>
-  <view class="buy-warp" bind:tap="goPay">
-    结算（{{allCount}}）
+  <view class="buy-warp" >
+    支付（{{allCount}}）
   </view>
 
 </view>

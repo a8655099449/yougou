@@ -34,3 +34,25 @@ export const openSetting = () => {
 		})
 	})
 }
+
+export const showModal = ({content}) => {
+	return new Promise((resolve, reject) => {
+    wx.showModal({
+      title: '提示',
+      content,
+      success :resolve,
+      fail:reject
+    })
+	})
+}
+
+export const showToast = ({title,icon = false}) => {
+	return new Promise((resolve, reject) => {
+    wx.showToast({
+      title,
+      icon: icon ? 'success' :'none',
+      success:resolve,
+      fail:reject
+    });
+	})
+}

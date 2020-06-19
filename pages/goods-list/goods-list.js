@@ -14,7 +14,7 @@ Page({
 		maxPage: 1,
 		goods: [],
 		defaultImg:
-			'http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_1_800x800.jpg',
+			'/assets/img/noImg.png',
 	},
 
 	/**

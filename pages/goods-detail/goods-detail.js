@@ -49,6 +49,7 @@ Page({
     if (index === -1) {
       // 没有商品数据
       this.goods_info.count = 1
+      this.goods_info.checked = true
       cart.push(this.goods_info)
       text = '加入购物车成功' 
 

@@ -16,4 +16,11 @@
     <image src="{{item[imageName]}}" mode="widthFix" class="swiper-img" />
   </swiper-item>
  </block>
+
+  <block wx:if="{{list.length === 0 }}">
+        <swiper-item class = "swiper-item" >
+    <image src="/assets/img/noImg.png" mode="widthFix" class="swiper-img" />
+  </swiper-item>
+  </block>
+
 </swiper>
