@@ -1,2 +1,66 @@
-<!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<!-- pages/profile/profile.wxml -->
+<view class="login" wx:if="{{!userInfo}}">
+  <button type="primary" plain open-type="getUserInfo" bindgetuserinfo="getUserData">登录授权</button>
+</view>
+<view class="main" wx:else>
+  <view class="userInfo">
+    <image class="bg_img" mode="widthFix" src="{{userInfo.avatarUrl}}" />
+    <view class="userName">
+      <image class="head_img" mode="widthFix" src="{{userInfo.avatarUrl}}" />
+      <view class="nickName">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="handle-warp">
+    <view class="order-state">
+      <view class="state-item">
+        <view class="state-num">0</view>
+        <view class="name">收藏的店铺</view>
+      </view>
+      <view class="state-item">
+        <view class="state-num">0</view>
+        <view class="name">收藏的商品</view>
+      </view>
+      <view class="state-item">
+        <view class="state-num">0</view>
+        <view class="name">关注的店铺</view>
+      </view>
+      <view class="state-item">
+        <view class="state-num">0</view>
+        <view class="name">我的足迹</view>
+      </view>
+    </view>
+    <view class="order-warp">
+      <view class="order-tit">我的订单</view>
+      <view class="order-list">
+        <navigator>
+          <view class="iconfont icon-rili"></view>
+          <view class="name">全部订单</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-sweep"></view>
+          <view class="name">代付款</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-daishouhuo"></view>
+          <view class="name">待收货</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-tuikuan"></view>
+          <view class="name">退款/退货</view>
+        </navigator>
+      </view>
+    </view>
+    <view class="handle-item mt20">收货地址管理</view>
+    <view class="handle-item mt20 bb1 phone-warp">
+          <text >联系客服 </text>
+          <text >5000-0550 </text>
+    </view>
+    <view class="handle-item bb1 ">
+      <text >意见反馈 </text>
+  
+ 
+    </view>
+    <view class="handle-item">关于我们</view>
+    <view class="handle-item mt20">把应用推荐给其他人</view>
+  </view>
+</view>

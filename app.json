@@ -8,7 +8,8 @@
     "pages/search/search",
     "pages/goods-list/goods-list",
     "pages/goods-detail/goods-detail",
-    "pages/goods-pay/goods-pay"
+    "pages/goods-pay/goods-pay",
+    "pages/auth/auth"
   ],
   "window": {
     "backgroundTextStyle": "light",

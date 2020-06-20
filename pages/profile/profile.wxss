@@ -1,1 +1,85 @@
 /* pages/profile/profile.wxss */
+.main .userInfo {
+  height: 45vh;
+  position: relative;
+  overflow: hidden;
+}
+.main .userInfo .bg_img {
+  height: 40vh;
+  filter: blur(10px);
+}
+.main .userInfo .userName {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.main .userInfo .userName .head_img {
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 50%;
+}
+.main .userInfo .nickName {
+  color: #fff;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+}
+.main .handle-warp {
+  background-color: #ebece7;
+  padding: 20rpx;
+  position: relative;
+  color: #666;
+}
+.main .handle-warp .order-state {
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: calc(100% - 40rpx);
+  top: -50rpx;
+  margin-left: 20rpx;
+  text-align: center;
+  background-color: white;
+}
+.main .handle-warp .order-state .state-item {
+  flex: 1;
+  padding: 20rpx;
+}
+.main .handle-warp .order-state .state-item .state-num {
+  color: var(--main-color);
+}
+.main .handle-warp .order-state .state-item .name {
+  font-size: 24rpx;
+}
+.main .handle-warp .order-warp {
+  background-color: white;
+  margin-top: 60rpx;
+}
+.main .handle-warp .order-warp .order-tit {
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+.main .handle-warp .order-warp .order-list {
+  display: flex;
+  text-align: center;
+}
+.main .handle-warp .order-warp .order-list navigator {
+  padding: 20rpx;
+  flex: 1;
+}
+.main .handle-warp .order-warp .order-list navigator .iconfont {
+  color: var(--main-color);
+  font-size: ;
+}
+.main .handle-warp .order-warp .order-list navigator .name {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.main .handle-warp .handle-item {
+  padding: 20rpx;
+  background-color: white;
+}
+.main .handle-warp .phone-warp {
+  display: flex;
+  justify-content: space-between;
+}

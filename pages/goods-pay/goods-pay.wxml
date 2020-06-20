@@ -72,7 +72,7 @@
       包含运费
     </view>
   </view>
-  <view class="buy-warp" >
+  <view class="buy-warp" bind:tap="handleOrderPay" >
     支付（{{allCount}}）
   </view>
 

@@ -1,5 +1,7 @@
 page{
-  --main-color:#ea444e
+  --main-color:#ea444e;
+  font-size: 28rpx;
+
 }
 image{
   width: 100%;

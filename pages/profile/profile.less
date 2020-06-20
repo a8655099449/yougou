@@ -1,0 +1,94 @@
+/* pages/profile/profile.wxss */
+
+.main {
+  // font-size: 28rpx;
+	.userInfo {
+		height: 45vh;
+		position: relative;
+		.bg_img {
+			height: 40vh;
+
+			filter: blur(10px);
+		}
+		overflow: hidden;
+		.userName {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 20%;
+			text-align: center;
+
+			.head_img {
+				height: 160rpx;
+				width: 160rpx;
+				border-radius: 50%;
+			}
+		}
+		.nickName {
+			color: #fff;
+			font-size: 32rpx;
+			margin-top: 20rpx;
+		}
+	}
+	.handle-warp {
+		background-color: #ebece7;
+		padding: 20rpx;
+		position: relative;
+		color: #666;
+
+		.order-state {
+			display: flex;
+			position: absolute;
+			left: 0;
+			width: calc(100% - 40rpx);
+			top: -50rpx;
+			margin-left: 20rpx;
+			text-align: center;
+			background-color: white;
+			.state-item {
+				flex: 1;
+				padding: 20rpx;
+
+				.state-num {
+					color: var(--main-color);
+				}
+				.name {
+					font-size: 24rpx;
+				}
+			}
+		}
+		.order-warp {
+			background-color: white;
+			margin-top: 60rpx;
+			.order-tit {
+				padding: 20rpx;
+				border-bottom: 1px solid #ccc;
+			}
+			.order-list {
+				display: flex;
+				text-align: center;
+				navigator {
+					padding: 20rpx;
+
+					flex: 1;
+					.iconfont {
+            color: var(--main-color);
+            font-size: ;
+					}
+					.name {
+            font-size: 24rpx;
+            margin-top: 10rpx;
+					}
+				}
+			}
+    }
+    .handle-item{
+      padding: 20rpx;
+      background-color: white;
+    }
+    .phone-warp{
+      display: flex;
+      justify-content: space-between;
+    }
+	}
+}

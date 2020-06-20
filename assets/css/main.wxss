@@ -5,3 +5,11 @@
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+.mt20{
+  margin-top: 20rpx;
+}
+
+.bb1{
+  border-bottom: 1rpx solid #ccc;
+}
+
