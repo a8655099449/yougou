@@ -9,7 +9,8 @@ Page({
 		params: {
 			pagenum: 1,
 			pagesize: 10,
-			cid: '',
+      cid: '',
+      query:''
 		},
 		maxPage: 1,
 		goods: [],
@@ -21,7 +22,9 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		this.data.params.cid = options.cid
+    this.data.params.cid = options.cid||''
+    this.data.params.query = options.query||''
+
 
 		this._getListData()
 	},

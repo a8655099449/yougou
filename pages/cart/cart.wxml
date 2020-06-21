@@ -47,9 +47,9 @@
           <image mode="widthFix" src="{{item.goods_big_logo? item.goods_big_logo :'/assets/img/noImg.png'}}"  />
         </view>
         <view class="desc">
-          <view class="goods-name text_row_2">
+          <navigator class="goods-name text_row_2" url="/pages/goods-detail/goods-detail?goods_id={{item.goods_id}}">
             {{item.goods_name}}
-          </view>
+          </navigator>
         
           <view class="handle-warp" >
             <view class="price">

@@ -1,0 +1,26 @@
+<yg-tab-control titles="{{titles}}" />
+
+<view class="goodsList">
+  <block 
+  wx:for="{{goodsList}}"
+  wx:key="index"
+  > 
+  <navigator url="/pages/goods-detail/goods-detail?goods_id={{item.goods_id}}" open-type="navigate">
+      <view class="list-item">
+
+          <view class="item-img">
+            <image mode="widthFix" src="{{item.goods_big_logo ==='' ? defaultImg :item.goods_big_logo}}" />
+          </view>
+          <view class="desc">
+            <view class="title text_row_2">
+              {{item.goods_name}}
+            </view>
+            <view class="price">
+              ￥{{item.goods_price}}
+            </view>
+          </view>
+
+      </view>
+  </navigator>
+  </block>
+</view>

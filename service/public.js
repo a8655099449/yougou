@@ -37,3 +37,9 @@ export function getToken(params){
     method:'post'
 	})
 }
+export function goodsQuery (query){
+  return request({
+    url: '/goods/qsearch',
+    data:{query},
+	})
+}

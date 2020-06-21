@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+		"yg-tab-control": "/components/yg-tab-control/yg-tab-control"
+  },
+  "navigationBarTitleText":"收藏"
+
+}

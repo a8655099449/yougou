@@ -69,7 +69,7 @@
 }
 .main .handle-warp .order-warp .order-list navigator .iconfont {
   color: var(--main-color);
-  font-size: ;
+  font-size: 42rpx ;
 }
 .main .handle-warp .order-warp .order-list navigator .name {
   font-size: 24rpx;
@@ -78,6 +78,15 @@
 .main .handle-warp .handle-item {
   padding: 20rpx;
   background-color: white;
+  position: relative;
+}
+.main .handle-warp .handle-item button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
 }
 .main .handle-warp .phone-warp {
   display: flex;

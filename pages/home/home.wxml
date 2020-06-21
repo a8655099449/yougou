@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
 <yg-search />
 
-<yg-swiper list="{{swiper}}" />
+<yg-swiper list="{{swiper}}" bind:itemClick="swiperClick" />
 
 <cate-list list="{{cateList}}" />
 

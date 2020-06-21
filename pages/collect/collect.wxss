@@ -1,3 +1,4 @@
+/* pages/collect/collect.wxss */
 .list-item {
   display: flex;
   width: 100%;
@@ -16,8 +17,9 @@
   flex: 3;
 }
 .list-item .desc .price {
+  font-size: 40prx;
   font-weight: 600;
   color: var(--main-color);
   line-height: 60rpx;
-  font-size: 40prx;
+  margin-top: 40rpx;
 }

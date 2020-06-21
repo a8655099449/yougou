@@ -19,9 +19,8 @@
           wx:key="index2"
           >
 
-          <view class="item-list" >
+          <view class="item-list"  bind:tap="itemClick" data-url="{{item2.navigator_url}}">
               <image src="{{item2.image_src}}" >
-                
               </image>
           </view>
 

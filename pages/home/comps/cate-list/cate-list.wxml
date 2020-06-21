@@ -1,7 +1,7 @@
 <view class="cate-list">
   <block wx:for="{{list}}" wx:key="index">
-    <view class="item">
+    <navigator class="item" url="/pages/category/category" open-type="switchTab">
       <image src="{{item.image_src}}" mode="widthFix" />
-    </view>
+    </navigator>
   </block>
 </view>

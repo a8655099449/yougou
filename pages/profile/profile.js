@@ -18,7 +18,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:null
+    userInfo:null,
+    collectNum:0
   },
 
   /**
@@ -26,10 +27,14 @@ Page({
    */
   onLoad: function (options) {
     this.setUserInfo()
-
+  },
+  onShow(){
+    const collects = wx.getStorageSync('collects')|| [];
+    this.setData({
+      collectNum:collects.length
+    })
 
   },
-
   async getUserData(e){
 
     const {userInfo} = e.detail

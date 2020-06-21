@@ -9,7 +9,9 @@
     "pages/goods-list/goods-list",
     "pages/goods-detail/goods-detail",
     "pages/goods-pay/goods-pay",
-    "pages/auth/auth"
+    "pages/auth/auth",
+    "pages/feedback/feedback",
+    "pages/collect/collect"
   ],
   "window": {
     "backgroundTextStyle": "light",

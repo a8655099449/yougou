@@ -21,6 +21,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    itemClick(e){
+      const {url} = e.currentTarget.dataset
+      const query = url.split('=')[1]
 
+      console.log(query);
+      wx.navigateTo({
+        url: '/pages/goods-list/goods-list?query='+query
+      });
+
+    }
   }
 })

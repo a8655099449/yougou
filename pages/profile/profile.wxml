@@ -16,10 +16,10 @@
         <view class="state-num">0</view>
         <view class="name">收藏的店铺</view>
       </view>
-      <view class="state-item">
-        <view class="state-num">0</view>
+      <navigator class="state-item" url="/pages/collect/collect">
+        <view class="state-num">{{collectNum}}</view>
         <view class="name">收藏的商品</view>
-      </view>
+      </navigator>
       <view class="state-item">
         <view class="state-num">0</view>
         <view class="name">关注的店铺</view>
@@ -50,17 +50,19 @@
         </navigator>
       </view>
     </view>
-    <view class="handle-item mt20">收货地址管理</view>
-    <view class="handle-item mt20 bb1 phone-warp">
-          <text >联系客服 </text>
-          <text >5000-0550 </text>
-    </view>
-    <view class="handle-item bb1 ">
-      <text >意见反馈 </text>
-  
- 
-    </view>
-    <view class="handle-item">关于我们</view>
-    <view class="handle-item mt20">把应用推荐给其他人</view>
+    <navigator class="handle-item mt20">收货地址管理</navigator>
+    <navigator class="handle-item mt20 bb1 phone-warp">
+      <text>联系客服</text>
+      <text>5000-0550</text>
+      <button open-type="contact"></button>
+    </navigator>
+    <navigator class="handle-item bb1 "url="/pages/feedback/feedback">
+      <text>意见反馈</text>
+    </navigator>
+    <navigator class="handle-item">关于我们</navigator>
+    <navigator class="handle-item mt20">
+      把应用推荐给其他人
+      <button open-type="share"></button>
+    </navigator>
   </view>
 </view>

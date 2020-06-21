@@ -1,66 +1,43 @@
-// pages/search/search.js
+import { goodsQuery } from '../../service/public.js'
+import { showToast } from '../../utils/asyncWX'
+import { runtime } from '../../utils/runtime'
+
 Page({
+	data: {
+    list: [],
+    btnShow:false,
+    searchText:''
+	},
+	changeSearch(e) {
+		const { value } = e.detail
+		if (!value.trim()) {
+      this.emptyList()
+			return
+		}
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+		clearTimeout(this.timer)
 
+		this.timer = setTimeout(() => {
+			this._goodsQuery(value)
+		}, 1000)
+	},
+	timer: -1,
+	async _goodsQuery(value) {
+		const res = await goodsQuery(value)
+		const list = res.data.message
+
+		this.setData({
+      list,
+      btnShow:true
+		})
   },
+  emptyList(){
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    this.setData({
+      searchText:'',
+      list: [],
+      btnShow:false,
+    })
   }
+
 })

@@ -42,7 +42,16 @@ Page({
         floorList:res.data.message
       })
     })
-  }
+  },
+  swiperClick(e){
+    const {index} = e.detail
+    const url = this.data.swiper[index].navigator_url.split('=')[1]
+
+    wx.navigateTo({
+      url: '/pages/goods-detail/goods-detail?goods_id='+url,
+    });
+    
+  },
   
 
 })

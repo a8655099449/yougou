@@ -13,3 +13,9 @@
   border-bottom: 1rpx solid #ccc;
 }
 
+.text_row_1 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -13,12 +13,12 @@ bind:itemClick="swiperClick"
       </view>
      
     </view>
-    <view class="collect">
-      <view class="iconfont icon-shoucang2">
+    <view class="collect" bind:tap="collect">
+      <view class="iconfont icon-shoucang2 {{isCollect ? 'active':''}}">
 
       </view>
 
-      <view class="text">
+      <view class="text" >
         收藏
       </view>
     </view>
