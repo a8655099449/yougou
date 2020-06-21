@@ -1,5 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+		"yg-tab-control": "/components/yg-tab-control/yg-tab-control"
+
+  },
   "navigationBarTitleText":"意见反馈"
 
 }

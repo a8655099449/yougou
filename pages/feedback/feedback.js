@@ -1,66 +1,54 @@
 // pages/feedback/feedback.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+	/**
+	 * 页面的初始数据
+	 */
+	data: {
+		imgList: [],
+		feedText: '',
+	},
+	timer: -1,
+	loadImg() {
+		wx.chooseImage({
+			count: 9,
+			sizeType: ['original', 'compressed'],
+			sourceType: ['album', 'camera'],
+			success: (result) => {
+				const imgList = result.tempFiles
+				let oldList = this.data.imgList
+				oldList.push(...imgList)
+				this.setData({
+					imgList: oldList,
+				})
+			},
+		})
+	},
+	submit() {
+		if (!this.data.feedText.trim()) {
+			return wx.showToast({
+				title: '请先输入内容',
+				icon: 'none',
+			})
+		}
+		wx.showToast({
+			title: '感谢您的反馈',
+			icon: 'success',
+		})
+		this.setData({
+			feedText: '',
+			imgList: [],
+		})
+	},
+	changeInp(e) {
+		const feedText = e.detail.value
+		clearTimeout(this.timer)
+		this.timer = setTimeout(() => {
+			this.setText(feedText)
+		}, 1000)
+	},
+	setText(feedText) {
+		this.setData({
+			feedText,
+		})
+	},
 })

@@ -1,1 +1,32 @@
-<!--pages/feedback/feedback.wxml-->
+<!-- pages/feedback/feedback.wxml -->
+<yg-tab-control titles="{{['体验问题','商品、商家投诉']}}" />
+<view class="main">
+  <view class="title">问题的种类</view>
+  <view class="variety">
+    <text class="variety-item">功能建议</text>
+    <text class="variety-item">购买遇到的问题</text>
+    <text class="variety-item">性能问题</text>
+    <text class="variety-item">其他</text>
+  </view>
+  <view class="inp-warp">
+    <textarea cols="30" rows="10" placeholder="请描述您的问题" value="{{feedText}}" 
+    bindinput="changeInp"
+    ></textarea>
+    <view class="addImg">
+      <!-- 加载图片区 -->
+      <button hover-class="button-hover" bind:tap="loadImg">+</button>
+      <block wx:for="{{imgList}}" wx:key="index">
+        <view class="img-warp">
+          <icon type="clear" size="23" color="#ea444e"></icon>
+          <image src="{{item.path}}" />
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="submit-warp">
+    <button bind:tap="submit">
+      <icon type="success_no_circle" size="23" color="white"  ></icon>
+      提交
+    </button>
+  </view>
+</view>
